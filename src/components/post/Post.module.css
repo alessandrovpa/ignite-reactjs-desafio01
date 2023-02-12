@@ -1,0 +1,86 @@
+.article{
+  background: var(--gray-800);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.article + .article {
+  margin-top: 2rem;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.header div{
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content p{
+  margin-top: 1rem;
+}
+
+.content a{
+  text-decoration: none;
+  color: var(--green-500);
+}
+.content a:hover{
+  color: var(--green-300);
+}
+
+.comments{
+  margin: 2rem 0;
+  padding-top: 2rem;
+  gap: 1rem;
+  border-top: 2px solid var(--gray-600);
+  display: flex;
+  flex-direction: column;
+}
+
+.comments textarea{
+  background: var(--gray-900);
+  border: 0;
+  resize: none;
+  outline: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0.75rem;
+  color: var(--gray-100);
+  border: 1px solid var(--gray-900);
+}
+
+.comments footer{
+  visibility: hidden;
+  max-height: 0;
+}
+
+.comments button{
+  font-weight: bold;
+  width: 20%;
+  min-width: 5.5rem;
+  color: var(--white);
+  background: var(--green-500);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: 0.1s;
+  border: 0;
+}
+.comments button:not(:disabled):hover{
+  background-color: var(--green-300);
+}
+.comments button:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.comments:focus-within footer{
+  visibility: visible;
+  max-height: none;
+}
